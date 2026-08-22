@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Business Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="center">
+    <section class="card" aria-label="Digital business card">
+      <div class="monogram" aria-hidden="true">AS</div>
+      <div class="item">Akshay Srivastava</div>
+      <div class="item">International Sales Engineer</div>
+      <div class="bio">International Project Engineer | 4+ Years in Japan | IIT Gandhinagar | JLPT N2</div>
+      <div class="item">
+        <div class="skills" role="list">
+          <button class="skill" type="button" aria-expanded="false" data-description="Engineering: designing and implementing technical solutions, prototyping, system architecture, and technical demonstrations for customers.">Engineering</button>
+          <button class="skill" type="button" aria-expanded="false" data-description="Sales: consultative selling, customer relationship building, negotiation, and expanding business across international markets.">Sales</button>
+          <a class="skill linkedin" role="button" aria-expanded="false" data-description="LinkedIn: View my professional profile and network." data-href="https://www.linkedin.com/in/akshay543/" href="https://www.linkedin.com/in/akshay543/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="location" aria-label="Location"> <span class="dot" aria-hidden="true"></span> Fukuoka, Japan</div>
+      <div class="contact">
+        <a class="email" href="mailto:akshay.srivastava543@gmail.com">akshay.srivastava543@gmail.com</a>
+        <a class="phone" href="tel:+819012345678">+81 90 1234 5678</a>
+        <a class="linkedin" href="https://www.linkedin.com/in/akshay543/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <div class="actions">
+          <button id="shareBtn" class="action-btn" type="button">Share</button>
+          <button id="downloadBtn" class="action-btn" type="button">Download PNG</button>
+        </div>
+      </div>
+    </section>
+      <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+      <script src="script.js"></script>
+  </main>
+</body>
+</html>
