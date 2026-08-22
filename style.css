@@ -1,6 +1,6 @@
 :root{
   --bg: #f3f4f6;
-  --card: #ffffff;
+  --card: #fff7ed; /* very light warm/orange tint */
   --text: #1f2937; /* subdued dark */
   --muted: #6b7280; /* gray-blue muted */
 }
@@ -45,7 +45,7 @@ body{
 .card{
   padding-left:2.25rem;
   border:1px solid rgba(31,41,55,0.06);
-  background: linear-gradient(180deg, #ffffff, #fbfcfd);
+  background: linear-gradient(180deg, var(--card), #fffaf6);
 }
 
 /* Monogram */
