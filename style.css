@@ -136,34 +136,6 @@ body {
   font-weight: 600;
 }
 
-.right {
-  align-self: center;
-  margin-right: .8rem;
-  color: white;
-}
-
-.qr {
-  width: 118px;
-  padding: .65rem;
-  display: grid;
-  gap: .5rem;
-  place-items: center;
-  background: white;
-  color: var(--navy);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, .16);
-}
-
-.qr svg { display: block; width: 86px; height: 86px; }
-
-.qr span {
-  color: var(--navy);
-  font-family: "DM Mono", monospace;
-  font-size: .51rem;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
 .contact-row {
   display: flex;
   flex-wrap: wrap;
@@ -214,15 +186,6 @@ body {
     padding-top: 3rem;
   }
 
-  .right {
-    position: absolute;
-    right: -.6rem;
-    top: 6.7rem;
-    margin: 0;
-    transform: scale(.8);
-    transform-origin: top right;
-  }
-
   .contact-row { padding-top: 1rem; }
 
   .contact-row a { font-size: .58rem; }
@@ -231,5 +194,4 @@ body {
 @media (max-width: 400px) {
   .card { padding: 1.4rem; }
   .person-name { font-size: 2rem; }
-  .right { right: -1rem; top: 6.3rem; transform: scale(.68); }
 }
