@@ -140,7 +140,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: .65rem 1.5rem;
-  padding-top: 1.2rem;
+  margin: 0 -.75rem -.75rem;
+  padding: 1.2rem .75rem .75rem;
+  position: relative;
+  background: var(--paper);
   border-top: 1px solid rgba(16, 42, 67, .11);
 }
 
