@@ -28,30 +28,124 @@ body {
   place-items: center;
   padding: 2rem;
 }
+.card {
+  width: min(760px, 100%);
+  min-height: 430px;
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  background: var(--paper);
+  border: 1px solid rgba(16, 42, 67, .09);
+  border-radius: 14px;
+  box-shadow: 0 28px 70px rgba(22, 43, 69, .2);
+}
 
-<<<<<<< HEAD
-.card-inner{position:relative;z-index:10;display:flex;flex-direction:column;gap:18px;width:100%;height:100%;}
-brand{display:flex;align-items:center;gap:16px}
-company{margin:0;font-size:18px;letter-spacing:0.6px;font-weight:800}
-slogan{font-size:13px;color:var(--muted);margin-top:4px}
-.avatar{width:72px;height:72px;border-radius:999px;object-fit:cover;box-shadow:0 6px 20px rgba(3,41,66,0.12);border:2px solid rgba(255,255,255,0.6)}
-.card-body{display:flex;justify-content:space-between;align-items:center;gap:16px}
-.left{flex:1}
-.right{width:140px;display:flex;justify-content:flex-end}
-.person-name{font-weight:900;font-size:18px;letter-spacing:1px}
-person-title{font-size:14px;color:var(--muted);margin-top:6px}
-.contact-list{display:flex;flex-direction:column;gap:6px;margin-top:12px}
-.contact-link{color:var(--text);text-decoration:none;font-weight:700;font-size:14px}
-.contact-link:hover{text-decoration:underline}
-.socials{display:flex;gap:10px;margin-top:10px}
-.social{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:8px;border:1px solid rgba(31,41,55,0.04);background:linear-gradient(180deg,#ffffff,#fbfbfb);font-weight:700}
-.social:hover{color:#0a66c2}
-.qr{background:linear-gradient(180deg,#ffffff,#fbfbfb);padding:8px;border-radius:12px;border:1px solid rgba(31,41,55,0.04);box-shadow:0 10px 28px rgba(11,37,69,0.06);display:inline-grid;place-items:center}
-.contact-row{display:flex;gap:12px;align-items:center;font-size:13px;color:var(--muted)}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 36%;
+  background: linear-gradient(155deg, #123c59 0%, var(--navy) 62%, #071725 100%);
+  clip-path: polygon(38% 0, 100% 0, 100% 100%, 0 100%);
+}
 
-@media (min-width:700px){
-  .card{width:720px;padding:2.25rem}
-=======
+.card::after {
+  content: "";
+  position: absolute;
+  right: -5rem;
+  bottom: -7rem;
+  width: 26rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 50%;
+  box-shadow: 0 0 0 28px rgba(58, 166, 163, .1), 0 0 0 56px rgba(255, 255, 255, .025);
+}
+
+.card-inner {
+  position: relative;
+  z-index: 1;
+  min-height: 318px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(3, 41, 66, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.left { flex: 1; }
+.right { width: 140px; display:flex; justify-content:flex-end }
+
+.company { margin: 0; font-size: .78rem; font-weight: 800; letter-spacing: .13em; line-height: 1.2 }
+.slogan { margin-top: .2rem; color: var(--muted); font-size: .7rem; font-weight: 500 }
+
+.person-name { font-weight: 800; margin:0 }
+.person-title { color: var(--muted); margin-top: .4rem }
+
+.contact-list { display:flex; flex-direction:column; gap:6px; margin-top:12px }
+.contact-link { color: var(--ink); text-decoration:none; font-weight:700 }
+.contact-link:hover { text-decoration: underline }
+
+.socials { display:flex; gap:10px; margin-top:10px }
+.social { font-size:13px; color:var(--muted); text-decoration:none; padding:6px 8px; border-radius:8px; border:1px solid rgba(31,41,55,0.04); background:linear-gradient(180deg,#ffffff,#fbfbfb); font-weight:700 }
+.social:hover{ color:#0a66c2 }
+
+.qr { background: linear-gradient(180deg,#ffffff,#fbfbfb); padding:8px; border-radius:12px; border:1px solid rgba(31,41,55,0.04); box-shadow:0 10px 28px rgba(11,37,69,0.06); display:inline-grid; place-items:center }
+
+.contact-row { display:flex; gap:12px; align-items:center; font-size:13px; color:var(--muted) }
+
+/* Main card content layout */
+.card-body { flex: 1; display:flex; align-items:center; justify-content:space-between }
+
+.eyebrow { margin:0 0 .65rem; color:var(--blue); font-family: "DM Mono", monospace; font-size:.62rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase }
+
+.person-name { max-width:400px; font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight:800; letter-spacing:-.02em; line-height:1 }
+.person-title { margin:.6rem 0 0; color:var(--muted); font-size:.9rem; font-weight:600 }
+
+.brand-mark { position: absolute; z-index:0; top:50%; right: clamp(1.5rem,4vw,3.25rem); width:160px; display:flex; align-items:center; gap:.6rem; color:white; transform: translateY(-43%) }
+.brand-mark-letter { color:#8cdbd6; font-size:5.7rem; font-weight:800; letter-spacing:-.13em; line-height:.8 }
+.brand-mark-name { font-family:"DM Mono", monospace; font-size:.6rem; font-weight:500; letter-spacing:.13em; line-height:1.65; text-transform:uppercase }
+
+.contact-row { display:flex; flex-wrap:wrap; gap:.65rem 1.5rem; margin:0 -.75rem -.75rem; padding:1.2rem .75rem .75rem; position:relative; background:var(--paper); border-top:1px solid rgba(16,42,67,.11) }
+
+.contact-row a { display:inline-flex; align-items:center; gap:.42rem; color:var(--ink); font-size:.7rem; font-weight:600; text-decoration:none; transition: color .15s }
+.contact-row a:hover, .contact-row a:focus-visible { color:var(--blue) }
+.contact-row svg { width:16px; height:16px; flex:0 0 auto; fill:currentColor }
+
+@media (max-width: 620px) {
+  .center { padding: 1rem }
+  .card { min-height: 0; padding: 1.8rem }
+  .card::before { width: 45%; opacity: .95 }
+  .brand-mark { top:56%; right:1.4rem; transform: translateY(-50%) scale(.74); transform-origin: right center }
+  .card-inner { min-height: 0 }
+  .card-body { min-height: 230px; align-items:flex-start; padding-top:3rem }
+  .contact-row { padding-top:1rem }
+  .contact-row a { font-size:.58rem }
+}
+
+@media (max-width: 400px) {
+  .card { padding: 1.4rem }
+  .person-name { font-size: 2rem }
+}
+
 .card {
   width: min(760px, 100%);
   min-height: 430px;
