@@ -58,15 +58,22 @@ body{
 }
 
 .card-inner{position:relative;z-index:10;display:flex;flex-direction:column;gap:18px;width:100%;height:100%;}
-.brand{display:flex;align-items:center;gap:16px}
-.company{margin:0;font-size:20px;letter-spacing:2px;font-weight:800}
-.slogan{font-size:12px;color:var(--muted);margin-top:2px}
+brand{display:flex;align-items:center;gap:16px}
+company{margin:0;font-size:18px;letter-spacing:0.6px;font-weight:800}
+slogan{font-size:13px;color:var(--muted);margin-top:4px}
+.avatar{width:72px;height:72px;border-radius:999px;object-fit:cover;box-shadow:0 6px 20px rgba(3,41,66,0.12);border:2px solid rgba(255,255,255,0.6)}
 .card-body{display:flex;justify-content:space-between;align-items:center;gap:16px}
 .left{flex:1}
 .right{width:140px;display:flex;justify-content:flex-end}
 .person-name{font-weight:900;font-size:18px;letter-spacing:1px}
-.person-title{font-size:12px;color:var(--muted);margin-top:6px}
-.qr{background:linear-gradient(180deg,#ffffff,#fbfbfb);padding:6px;border-radius:8px;border:1px solid rgba(31,41,55,0.04);box-shadow:0 6px 18px rgba(11,37,69,0.04)}
+person-title{font-size:14px;color:var(--muted);margin-top:6px}
+.contact-list{display:flex;flex-direction:column;gap:6px;margin-top:12px}
+.contact-link{color:var(--text);text-decoration:none;font-weight:700;font-size:14px}
+.contact-link:hover{text-decoration:underline}
+.socials{display:flex;gap:10px;margin-top:10px}
+.social{font-size:13px;color:var(--muted);text-decoration:none;padding:6px 8px;border-radius:8px;border:1px solid rgba(31,41,55,0.04);background:linear-gradient(180deg,#ffffff,#fbfbfb);font-weight:700}
+.social:hover{color:#0a66c2}
+.qr{background:linear-gradient(180deg,#ffffff,#fbfbfb);padding:8px;border-radius:12px;border:1px solid rgba(31,41,55,0.04);box-shadow:0 10px 28px rgba(11,37,69,0.06);display:inline-grid;place-items:center}
 .contact-row{display:flex;gap:12px;align-items:center;font-size:13px;color:var(--muted)}
 
 @media (min-width:700px){
@@ -222,6 +229,15 @@ body{
 
 
 @media (min-width:700px){
-  .card{width:420px;padding:2rem}
+  .card{width:520px;padding:2rem}
+}
+@media (max-width:699px){
+  .card{aspect-ratio:unset;padding:1rem}
+  .card-body{flex-direction:column;gap:14px;align-items:flex-start}
+  .right{width:100%}
+  .person-name{font-size:18px}
+  .person-title{font-size:14px}
+  .qr img{width:140px;height:140px}
+}
   .item{font-size:20px}
 }

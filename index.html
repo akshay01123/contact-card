@@ -8,19 +8,13 @@
 </head>
 <body>
   <main class="center">
-    <section class="card" aria-label="Digital business card">
+    <section class="card" aria-label="Digital Business Card">
       <div class="card-inner">
         <div class="brand">
-          <div class="logo" aria-hidden="true">
-            <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="72" height="72" rx="12" fill="#fff" />
-              <circle cx="36" cy="24" r="14" fill="#0b4f6c" />
-              <rect x="28" y="36" width="16" height="18" rx="4" fill="#0b4f6c" />
-            </svg>
-          </div>
+          <img class="avatar" src="https://avatars.githubusercontent.com/u/198231150?v=4" alt="Akshay Srivastava" width="96" height="96">
           <div>
-            <h2 class="company">COMPANY NAME</h2>
-            <div class="slogan">Company Slogan</div>
+            <h2 class="company">Kuken Industries</h2>
+            <div class="slogan">International Sales Engineer</div>
           </div>
         </div>
 
@@ -28,26 +22,26 @@
           <div class="left">
             <div class="person-name">Akshay Srivastava</div>
             <div class="person-title">International Sales Engineer</div>
+            <div class="contact-list">
+              <a class="contact-link" href="tel:090-1365-6148">090-1365-6148</a>
+              <a class="contact-link" href="mailto:akshay.srivastava543@gmail.com">akshay.srivastava543@gmail.com</a>
+              <a class="contact-link" href="https://portfolio-akshay01123.github.io" target="_blank" rel="noopener noreferrer">portfolio-akshay01123.github.io</a>
+            </div>
+            <div class="socials">
+              <a class="social" href="https://www.linkedin.com/in/akshay543/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="social" href="https://github.com/akshay01123" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
           </div>
           <div class="right">
-            <div class="qr" aria-hidden="true">
-              <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QR code placeholder">
-                <rect width="120" height="120" fill="#fafafa" rx="8" />
-                <g fill="#0b1720">
-                  <rect x="12" y="12" width="20" height="20" />
-                  <rect x="12" y="12" width="8" height="8" fill="#fff" />
-                  <rect x="100" y="100" width="8" height="8" />
-                  <rect x="80" y="80" width="30" height="30" />
-                </g>
-                <text x="60" y="100" font-size="8" text-anchor="middle" fill="#9aa1a8">scan</text>
-              </svg>
+            <div class="qr" aria-hidden="false">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://portfolio-akshay01123.github.io" alt="QR code to Akshay's portfolio" width="160" height="160">
             </div>
           </div>
         </div>
 
-        <div class="contact-row">
-          <a class="email" href="mailto:akshay.srivastava543@gmail.com">akshay.srivastava543@gmail.com</a>
-          <a class="linkedin" href="https://www.linkedin.com/in/akshay543/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <div class="contact-row" aria-hidden="true">
+          <button id="shareBtn" class="action-btn">Share</button>
+          <button id="downloadBtn" class="action-btn">Download</button>
         </div>
       </div>
     </section>
