@@ -105,7 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const dataUrl = canvas.toDataURL('image/png');
         const a = document.createElement('a');
         a.href = dataUrl;
-        a.download = 'contact-card.png';
+        // derive filename from entered name > company > email
+        const filenameBase = (nameInput && nameInput.value.trim()) || (companyInput && companyInput.value.trim()) || (emailInput && emailInput.value.split('@')[0]) || 'contact-card';
+        const safe = filenameBase.replace(/[^a-z0-9-_]/gi, '_').toLowerCase();
+        a.download = `${safe}.png`;
         document.body.appendChild(a);
         a.click();
         a.remove();
