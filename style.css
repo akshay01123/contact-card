@@ -33,7 +33,8 @@ body {
 
 .card {
   width: min(760px, 100%);
-  background: var(--paper);
+  /* slight teal-tinted background so the card reads warmer against the page */
+  background: linear-gradient(180deg,#ffffff,#f3fbfa);
   border-radius: 14px;
   padding: clamp(1.25rem, 3vw, 2.25rem);
   box-shadow: 0 24px 60px rgba(16,42,67,0.12);
@@ -94,11 +95,23 @@ body {
 
 .card-body{ display:flex; flex-direction:column; gap:.6rem; align-items:flex-start }
 
-.left{ width:100% }
+/* left column: center content and add a translucent panel for readability */
+.left{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding: 1rem;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 8px 20px rgba(16,42,67,0.04);
+}
 .right{ width:160px; display:flex; justify-content:flex-end }
 
-.person-name{ margin:0; font-size:1.1rem; font-weight:800; color:var(--navy) }
-.person-title{ margin:.35rem 0 0; color:var(--muted); font-weight:600 }
+.person-name{ margin:0; font-size:1.1rem; font-weight:800; color:var(--navy); text-align:center }
+.person-title{ margin:.35rem 0 0; color:var(--muted); font-weight:600; text-align:center }
 
 .contact-list{ display:flex; flex-direction:column; gap:6px; margin-top:10px }
 .contact-link{ color:var(--ink); text-decoration:none; font-weight:700 }
