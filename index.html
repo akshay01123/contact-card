@@ -8,6 +8,41 @@
 </head>
 <body>
   <main class="center">
+    <aside class="editor" aria-label="Card editor">
+      <h3>Build your card</h3>
+      <form id="cardForm">
+        <label>
+          Name
+          <input id="nameInput" type="text" placeholder="Your name">
+        </label>
+
+        <label>
+          Company
+          <input id="companyInput" type="text" placeholder="Company name">
+        </label>
+
+        <label>
+          Phone
+          <input id="phoneInput" type="tel" placeholder="090-1234-5678">
+        </label>
+
+        <label>
+          Email
+          <input id="emailInput" type="email" placeholder="you@example.com">
+        </label>
+
+        <fieldset>
+          <legend>Design</legend>
+          <label><input name="theme" type="radio" value="default" checked> Classic</label>
+          <label><input name="theme" type="radio" value="dark"> Dark</label>
+          <label><input name="theme" type="radio" value="modern"> Modern</label>
+        </fieldset>
+
+        <div class="editor-actions">
+          <button type="button" id="resetBtn">Reset</button>
+        </div>
+      </form>
+    </aside>
     <section class="card" aria-label="Business card for Akshay Srivastava">
       <div class="card-inner">
         <div class="brand">
@@ -24,9 +59,9 @@
             <div class="person-title">International Sales Engineer</div>
 
             <div class="contact-list">
-              <a class="contact-link" href="tel:090-1365-6148">090-1365-6148</a>
-              <a class="contact-link" href="mailto:akshay.srivastava543@gmail.com">akshay.srivastava543@gmail.com</a>
-              <a class="contact-link" href="https://portfolio-akshay01123.github.io" target="_blank" rel="noopener noreferrer">portfolio-akshay01123.github.io</a>
+              <a id="phoneLink" class="contact-link" href="tel:090-1365-6148">090-1365-6148</a>
+              <a id="emailLink" class="contact-link" href="mailto:akshay.srivastava543@gmail.com">akshay.srivastava543@gmail.com</a>
+              <a id="portfolioLink" class="contact-link" href="https://portfolio-akshay01123.github.io" target="_blank" rel="noopener noreferrer">portfolio-akshay01123.github.io</a>
             </div>
 
             <div class="socials" aria-label="Social links">

@@ -162,3 +162,20 @@ body {
   .person-name{ font-size:1rem }
   .qr{ width:100px; height:100px }
 }
+
+/* Theme presets */
+.theme-dark {
+  background: linear-gradient(180deg,#0f2b3b,#07212a);
+  color: #e7f6f5;
+}
+.theme-dark .card-inner { background: transparent }
+.theme-dark .left { background: rgba(5,26,36,0.25) }
+.theme-dark .person-name, .theme-dark .company { color: #e7f6f5 }
+
+.theme-modern {
+  background: linear-gradient(180deg,#fffaf6,#f3fbff);
+  color: var(--navy);
+}
+.theme-modern .left { background: linear-gradient(180deg, rgba(250,250,250,0.9), rgba(245,255,255,0.9)) }
+.theme-modern .person-name { color: var(--teal) }
+
