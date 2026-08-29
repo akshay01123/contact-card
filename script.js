@@ -45,10 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Wire inputs
-  if (nameInput) nameInput.addEventListener('input', e => updateName(e.target.value));
-  if (companyInput) companyInput.addEventListener('input', e => updateCompany(e.target.value));
-  if (phoneInput) phoneInput.addEventListener('input', e => updatePhone(e.target.value));
-  if (emailInput) emailInput.addEventListener('input', e => updateEmail(e.target.value));
+  // Prefill editor with current card values
+  if (nameInput) nameInput.value = initial.name || '';
+  if (companyInput) companyInput.value = initial.company || '';
+  if (phoneInput) phoneInput.value = initial.phone || '';
+  if (emailInput) emailInput.value = initial.email || '';
+
+  // Run button: apply entered values to the card when pressed
+  const runBtn = document.getElementById('runBtn');
+  if (runBtn) runBtn.addEventListener('click', () => {
+    updateName(nameInput ? nameInput.value : '');
+    updateCompany(companyInput ? companyInput.value : '');
+    updatePhone(phoneInput ? phoneInput.value : '');
+    updateEmail(emailInput ? emailInput.value : '');
+    const selected = document.querySelector('input[name="theme"]:checked');
+    applyTheme(selected ? selected.value : 'default');
+  });
 
   themeRadios.forEach(r => r.addEventListener('change', (e) => applyTheme(e.target.value)));
 
