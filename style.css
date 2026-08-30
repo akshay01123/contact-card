@@ -179,3 +179,25 @@ body {
 .theme-modern .left { background: linear-gradient(180deg, rgba(250,250,250,0.9), rgba(245,255,255,0.9)) }
 .theme-modern .person-name { color: var(--teal) }
 
+/* Minimal theme */
+.theme-minimal {
+  background: #f8fbfb;
+}
+.theme-minimal .card-inner {
+  grid-template-columns: 160px 1fr;
+  gap: 1rem 2rem;
+  align-items: center;
+}
+.theme-minimal .minimal-illustration { display:block; }
+.minimal-illustration { display:none; }
+.theme-minimal .card { box-shadow: none; border: 1px solid rgba(11,37,69,0.06); }
+.theme-minimal .left { background: transparent; box-shadow: none; padding:0; }
+.theme-minimal .person-name { font-size: 1.45rem; font-weight:800; color:var(--navy); }
+.theme-minimal .person-title { color:var(--muted); font-size:0.95rem; margin-top:.25rem }
+.theme-minimal .company { font-size: .95rem; color:var(--muted); font-weight:700 }
+.theme-minimal .contact-list { display:flex; flex-direction:column; gap:8px; margin-top:10px }
+.theme-minimal .contact-link { color:var(--ink); font-weight:600; text-decoration:none }
+.theme-minimal .contact-row { margin-top: .6rem; background: transparent; padding:0 }
+.theme-minimal .brand { display:none }
+.theme-minimal .brand-mark { display:none }
+
