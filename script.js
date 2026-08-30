@@ -113,14 +113,41 @@ document.addEventListener('DOMContentLoaded', () => {
   if (downloadBtn && window.html2canvas) {
     downloadBtn.addEventListener('click', async () => {
       try {
-        const canvas = await html2canvas(card, { backgroundColor: null, scale: 2 });
-        const dataUrl = canvas.toDataURL('image/png');
+        // determine desired DPI (defaults to 300 for meishi)
+        const dpiSelect = document.getElementById('exportDpi');
+        const dpi = parseInt(dpiSelect ? dpiSelect.value : '300', 10) || 300;
+
+        // meishi size in mm
+        const mmW = 91; const mmH = 55;
+        const inchesW = mmW / 25.4; const inchesH = mmH / 25.4;
+        const targetPxW = Math.round(inchesW * dpi);
+        const targetPxH = Math.round(inchesH * dpi);
+
+        const rect = card.getBoundingClientRect();
+        const cssWidth = Math.round(rect.width);
+        const cssHeight = Math.round(rect.height);
+        const scale = targetPxW / cssWidth;
+
+        // render at computed scale to obtain target pixel dimensions
+        const canvas = await html2canvas(card, { backgroundColor: '#ffffff', scale: scale });
+
+        // If canvas size doesn't exactly match target (rounding), resample to exact size
+        let finalCanvas = canvas;
+        if (canvas.width !== targetPxW || canvas.height !== targetPxH) {
+          const tmp = document.createElement('canvas');
+          tmp.width = targetPxW;
+          tmp.height = targetPxH;
+          const ctx = tmp.getContext('2d');
+          ctx.drawImage(canvas, 0, 0, tmp.width, tmp.height);
+          finalCanvas = tmp;
+        }
+
+        const dataUrl = finalCanvas.toDataURL('image/png');
         const a = document.createElement('a');
         a.href = dataUrl;
-        // derive filename from entered name > company > email
-        const filenameBase = (nameInput && nameInput.value.trim()) || (companyInput && companyInput.value.trim()) || (emailInput && emailInput.value.split('@')[0]) || 'contact-card';
+        const filenameBase = (nameInput && nameInput.value.trim()) || (companyInput && companyInput.value.trim()) || (emailInput && (emailInput.value.split('@')[0])) || 'contact-card';
         const safe = filenameBase.replace(/[^a-z0-9-_]/gi, '_').toLowerCase();
-        a.download = `${safe}.png`;
+        a.download = `${safe}_${targetPxW}x${targetPxH}_${dpi}dpi.png`;
         document.body.appendChild(a);
         a.click();
         a.remove();
