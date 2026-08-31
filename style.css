@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap');
 
 :root {
   --ink: #102a43;
@@ -17,7 +18,8 @@ html, body { height: 100%; }
 body {
   margin: 0;
   color: var(--ink);
-  font-family: "Manrope", "Segoe UI", sans-serif;
+  /* prefer Japanese-capable fonts for better glyph rendering */
+  font-family: "Noto Sans JP", "Manrope", "Segoe UI", sans-serif;
   /* subtler background so the card content reads clearly */
   background:
     radial-gradient(circle at 12% 10%, rgba(58, 166, 163, .04), transparent 28rem),
@@ -34,7 +36,7 @@ body {
 .card {
   width: min(760px, 100%);
   /* slight teal-tinted background so the card reads warmer against the page */
-  background: linear-gradient(180deg,#ffffff,#f3fbfa);
+  background: linear-gradient(180deg,#ffffff,#f8fbf9);
   border-radius: 14px;
   padding: clamp(1.25rem, 3vw, 2.25rem);
   box-shadow: 0 24px 60px rgba(16,42,67,0.12);
@@ -44,14 +46,14 @@ body {
 }
 
 .card::before{
+  /* Japanese style: subtle vertical accent band on the left resembling a traditional block */
   content: "";
   position: absolute;
   inset: 0 0 0 auto;
-  /* narrower, slightly transparent accent so text area stays bright */
-  width: 28%;
-  background: linear-gradient(155deg, #123c59 0%, var(--navy) 62%, #071725 100%);
-  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
-  opacity: .72;
+  width: 22%;
+  background: linear-gradient(180deg, rgba(11,37,69,0.98), rgba(12,47,70,0.9));
+  clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%);
+  opacity: .92;
 }
 
 .card::after{
@@ -80,6 +82,9 @@ body {
   flex-direction:column;
   align-items:center;
   gap:.45rem;
+  /* give the brand area a little breathing room from the dark band */
+  padding-left: calc(22% + 0.5rem);
+  margin-left: -0.5rem;
 }
 
 .avatar{
@@ -91,7 +96,7 @@ body {
   border:1px solid rgba(16,42,67,0.06);
 }
 
-.company{ margin:0; font-size:1rem; font-weight:900; letter-spacing:.06em; color: var(--navy); text-align:center }
+.company{ margin:0; font-size:1rem; font-weight:700; letter-spacing:.04em; color: rgba(3,18,28,0.95); text-align:center; font-family: "Noto Serif JP", serif }
 .slogan{ font-size:.82rem; color: var(--muted); margin-top: .08rem; text-align:center }
 
 .card-body{ display:flex; flex-direction:column; gap:.6rem; align-items:flex-start }
@@ -111,10 +116,10 @@ body {
 }
 .right{ width:160px; display:flex; justify-content:flex-end }
 
-.person-name{ margin:0; font-size:1.1rem; font-weight:800; color:var(--navy); text-align:center }
+.person-name{ margin:0; font-size:1.2rem; font-weight:900; color:var(--navy); text-align:center; font-family: "Noto Serif JP", serif }
 .person-title{ margin:.35rem 0 0; color:var(--muted); font-weight:600; text-align:center }
 
-.contact-list{ display:flex; flex-direction:column; gap:6px; margin-top:10px }
+.contact-list{ display:flex; flex-direction:column; gap:6px; margin-top:12px }
 .contact-link{ color:var(--ink); text-decoration:none; font-weight:700 }
 .contact-link:hover{ text-decoration:underline }
 
@@ -140,6 +145,17 @@ body {
 .brand-mark-name{ font-family:"DM Mono", monospace; font-size:.65rem; text-transform:uppercase }
 
 .contact-row{ display:flex; gap:12px; align-items:center; justify-content:space-between; margin-top:1rem }
+
+/* add a thin vertical rule near the left band to separate text cleanly */
+.card::after{
+  content: "";
+  position: absolute;
+  left: calc(22% + 1rem);
+  top: 1.25rem;
+  bottom: 1.25rem;
+  width: 1px;
+  background: rgba(3,18,28,0.06);
+}
 .contact-row .actions{ display:flex; gap:10px }
 
 .action-btn{ appearance:none; border:none; padding:.55rem .9rem; border-radius:10px; font-weight:700; cursor:pointer }
