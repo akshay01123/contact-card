@@ -35,8 +35,8 @@ body {
 
 .card {
   width: min(760px, 100%);
-  /* slight teal-tinted background so the card reads warmer against the page */
-  background: linear-gradient(180deg,#ffffff,#f8fbf9);
+  /* plain white background per request */
+  background: #ffffff;
   border-radius: 14px;
   padding: clamp(1.25rem, 3vw, 2.25rem);
   box-shadow: 0 24px 60px rgba(16,42,67,0.12);
@@ -45,16 +45,7 @@ body {
   overflow: hidden;
 }
 
-.card::before{
-  /* Japanese style: subtle vertical accent band on the left resembling a traditional block */
-  content: "";
-  position: absolute;
-  inset: 0 0 0 auto;
-  width: 22%;
-  background: linear-gradient(180deg, rgba(11,37,69,0.98), rgba(12,47,70,0.9));
-  clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%);
-  opacity: .92;
-}
+.card::before{ display: none; }
 
 .card::after{
   content: "";
@@ -82,9 +73,8 @@ body {
   flex-direction:column;
   align-items:center;
   gap:.45rem;
-  /* give the brand area a little breathing room from the dark band */
-  padding-left: calc(22% + 0.5rem);
-  margin-left: -0.5rem;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .avatar{
