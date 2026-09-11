@@ -26,9 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Theme application
   function applyTheme(value) {
-    card.classList.remove('theme-dark', 'theme-modern');
-    if (value === 'dark') card.classList.add('theme-dark');
-    if (value === 'modern') card.classList.add('theme-modern');
+    // Remove all theme classes
+    const allThemes = ['theme-dark', 'theme-modern', 'theme-minimal', 'theme-pastel', 'theme-vibrant', 'theme-professional', 'theme-sunset', 'theme-ocean', 'theme-forest', 'theme-purple', 'theme-rose', 'theme-monochrome', 'theme-neon'];
+    allThemes.forEach(theme => card.classList.remove(theme));
+    
+    // Add the selected theme (skip 'default' as it has no class)
+    if (value !== 'default') {
+      card.classList.add(`theme-${value}`);
+    }
   }
 
   // Update functions for card content

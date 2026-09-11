@@ -704,3 +704,213 @@ body {
   display: none;
 }
 
+/* Pastel Theme - Soft, Dreamy Colors */
+.theme-pastel {
+  background: linear-gradient(135deg, #fce4ec 0%, #e1f5fe 50%, #f3e5f5 100%);
+}
+
+.theme-pastel .card {
+  background: linear-gradient(180deg, #fff9fb 0%, #f3f5ff 100%);
+  box-shadow: 0 4px 16px rgba(233, 30, 99, 0.1), 0 8px 24px rgba(63, 81, 181, 0.08);
+}
+
+.theme-pastel .left {
+  background: linear-gradient(135deg, rgba(244, 143, 177, 0.08), rgba(144, 202, 249, 0.08));
+}
+
+.theme-pastel .person-name { color: #c2185b; }
+.theme-pastel .person-title { color: #5e35b1; }
+.theme-pastel .contact-link { color: #7b1fa2; }
+.theme-pastel .social { background: rgba(233, 30, 99, 0.08); border-color: rgba(233, 30, 99, 0.2); color: #c2185b; }
+.theme-pastel .social:hover { background: rgba(233, 30, 99, 0.15); color: #880e4f; }
+.theme-pastel .action-btn.primary { background: linear-gradient(135deg, #ec407a, #ab47bc); }
+
+/* Vibrant Theme - Bold, Energetic Colors */
+.theme-vibrant {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 50%, #6bcf7f 100%);
+}
+
+.theme-vibrant .card {
+  background: linear-gradient(180deg, #ffffff 0%, #fffef0 100%);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.15), 0 2px 8px rgba(255, 107, 107, 0.1);
+}
+
+.theme-vibrant .left {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(107, 207, 127, 0.1));
+}
+
+.theme-vibrant .person-name { color: #ff6b6b; font-weight: 900; }
+.theme-vibrant .person-title { color: #ff9800; font-weight: 700; }
+.theme-vibrant .contact-link { color: #ff6b6b; }
+.theme-vibrant .social { background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 217, 61, 0.1)); border-color: #ff6b6b; color: #ff6b6b; }
+.theme-vibrant .action-btn.primary { background: linear-gradient(135deg, #ff6b6b, #ffd93d); }
+
+/* Professional Theme - Corporate Trust */
+.theme-professional {
+  background: linear-gradient(180deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.theme-professional .card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
+  box-shadow: 0 2px 12px rgba(59, 89, 152, 0.12), 0 8px 24px rgba(59, 89, 152, 0.08);
+}
+
+.theme-professional .left {
+  background: linear-gradient(135deg, rgba(59, 89, 152, 0.05), rgba(66, 133, 244, 0.05));
+}
+
+.theme-professional .person-name { color: #1a3a52; font-family: "Georgia", "Noto Serif JP", serif; font-size: 1.4rem; font-weight: 700; }
+.theme-professional .person-title { color: #3b5998; font-size: 1rem; font-weight: 600; letter-spacing: 0.5px; }
+.theme-professional .contact-link { color: #3b5998; }
+.theme-professional .social { background: rgba(59, 89, 152, 0.08); border-color: rgba(59, 89, 152, 0.2); color: #3b5998; }
+.theme-professional .action-btn.primary { background: linear-gradient(135deg, #3b5998, #4285f4); }
+
+/* Sunset Theme - Warm Orange and Pink */
+.theme-sunset {
+  background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #f7931e 100%);
+}
+
+.theme-sunset .card {
+  background: linear-gradient(180deg, #fffbf7 0%, #fff3e0 100%);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.15);
+}
+
+.theme-sunset .left {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+}
+
+.theme-sunset .person-name { color: #d84315; }
+.theme-sunset .person-title { color: #e65100; }
+.theme-sunset .contact-link { color: #d84315; }
+.theme-sunset .social { background: rgba(255, 107, 53, 0.1); border-color: rgba(255, 107, 53, 0.25); color: #d84315; }
+.theme-sunset .action-btn.primary { background: linear-gradient(135deg, #ff6b35, #e65100); }
+
+/* Ocean Theme - Deep Blue and Teal */
+.theme-ocean {
+  background: linear-gradient(135deg, #005a87 0%, #00838f 50%, #00695c 100%);
+}
+
+.theme-ocean .card {
+  background: linear-gradient(180deg, #f0f7fa 0%, #e0f2f1 100%);
+  box-shadow: 0 6px 20px rgba(0, 90, 135, 0.15);
+}
+
+.theme-ocean .left {
+  background: linear-gradient(135deg, rgba(0, 90, 135, 0.08), rgba(0, 131, 143, 0.08));
+}
+
+.theme-ocean .person-name { color: #004d73; }
+.theme-ocean .person-title { color: #00695c; }
+.theme-ocean .contact-link { color: #005a87; }
+.theme-ocean .social { background: rgba(0, 90, 135, 0.08); border-color: rgba(0, 90, 135, 0.2); color: #005a87; }
+.theme-ocean .action-btn.primary { background: linear-gradient(135deg, #005a87, #00695c); }
+
+/* Forest Theme - Natural Green */
+.theme-forest {
+  background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 50%, #558b2f 100%);
+}
+
+.theme-forest .card {
+  background: linear-gradient(180deg, #f7fdf8 0%, #f1f8e9 100%);
+  box-shadow: 0 6px 20px rgba(27, 94, 32, 0.15);
+}
+
+.theme-forest .left {
+  background: linear-gradient(135deg, rgba(27, 94, 32, 0.08), rgba(56, 142, 60, 0.08));
+}
+
+.theme-forest .person-name { color: #1b5e20; }
+.theme-forest .person-title { color: #388e3c; }
+.theme-forest .contact-link { color: #1b5e20; }
+.theme-forest .social { background: rgba(27, 94, 32, 0.08); border-color: rgba(27, 94, 32, 0.2); color: #1b5e20; }
+.theme-forest .action-btn.primary { background: linear-gradient(135deg, #1b5e20, #388e3c); }
+
+/* Purple Theme - Royal and Lavender */
+.theme-purple {
+  background: linear-gradient(135deg, #6a1b9a 0%, #7b1fa2 50%, #8e24aa 100%);
+}
+
+.theme-purple .card {
+  background: linear-gradient(180deg, #faf9fc 0%, #f3e5f5 100%);
+  box-shadow: 0 6px 20px rgba(123, 31, 162, 0.15);
+}
+
+.theme-purple .left {
+  background: linear-gradient(135deg, rgba(123, 31, 162, 0.08), rgba(156, 39, 176, 0.08));
+}
+
+.theme-purple .person-name { color: #6a1b9a; }
+.theme-purple .person-title { color: #7b1fa2; }
+.theme-purple .contact-link { color: #6a1b9a; }
+.theme-purple .social { background: rgba(123, 31, 162, 0.08); border-color: rgba(123, 31, 162, 0.2); color: #6a1b9a; }
+.theme-purple .action-btn.primary { background: linear-gradient(135deg, #6a1b9a, #8e24aa); }
+
+/* Rose Gold Theme - Elegant Pink and Gold */
+.theme-rose {
+  background: linear-gradient(135deg, #d4a5a5 0%, #c9a97e 50%, #b8860b 100%);
+}
+
+.theme-rose .card {
+  background: linear-gradient(180deg, #fef8f7 0%, #fef5f0 100%);
+  box-shadow: 0 6px 20px rgba(180, 82, 45, 0.12);
+}
+
+.theme-rose .left {
+  background: linear-gradient(135deg, rgba(198, 124, 78, 0.08), rgba(184, 134, 11, 0.08));
+}
+
+.theme-rose .person-name { color: #8b4513; }
+.theme-rose .person-title { color: #a0522d; }
+.theme-rose .contact-link { color: #8b4513; }
+.theme-rose .social { background: rgba(180, 82, 45, 0.08); border-color: rgba(180, 82, 45, 0.2); color: #8b4513; }
+.theme-rose .action-btn.primary { background: linear-gradient(135deg, #c67c4e, #b8860b); }
+
+/* Monochrome Theme - Clean Black and White */
+.theme-monochrome {
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+.theme-monochrome .card {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 2px solid #000000;
+}
+
+.theme-monochrome .left {
+  background: #f0f0f0;
+  border: 2px solid #000000;
+}
+
+.theme-monochrome .person-name { color: #000000; font-weight: 900; letter-spacing: -1px; }
+.theme-monochrome .person-title { color: #333333; text-transform: uppercase; letter-spacing: 1.5px; }
+.theme-monochrome .contact-link { color: #000000; font-weight: 800; }
+.theme-monochrome .social { background: #000000; border: 2px solid #000000; color: #ffffff; font-weight: 700; }
+.theme-monochrome .social:hover { background: #ffffff; color: #000000; }
+.theme-monochrome .action-btn.primary { background: #000000; color: #ffffff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
+.theme-monochrome .action-btn.primary:hover { background: #333333; }
+
+/* Neon Theme - Bright and Bold */
+.theme-neon {
+  background: linear-gradient(135deg, #0a0e27 0%, #16213e 50%, #0f3460 100%);
+}
+
+.theme-neon .card {
+  background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+  box-shadow: 0 0 20px rgba(0, 255, 150, 0.3), 0 0 40px rgba(0, 150, 255, 0.2), 0 8px 24px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 255, 150, 0.5);
+}
+
+.theme-neon .left {
+  background: rgba(0, 255, 150, 0.05);
+  border: 1px solid rgba(0, 255, 150, 0.3);
+  box-shadow: 0 0 15px rgba(0, 255, 150, 0.1);
+}
+
+.theme-neon .person-name { color: #00ff96; font-weight: 900; text-shadow: 0 0 10px rgba(0, 255, 150, 0.5); }
+.theme-neon .person-title { color: #0096ff; text-shadow: 0 0 10px rgba(0, 150, 255, 0.4); }
+.theme-neon .contact-link { color: #00ff96; }
+.theme-neon .contact-link:hover { color: #0096ff; text-shadow: 0 0 10px rgba(0, 150, 255, 0.6); }
+.theme-neon .social { background: rgba(0, 255, 150, 0.1); border: 1px solid rgba(0, 255, 150, 0.4); color: #00ff96; }
+.theme-neon .social:hover { background: rgba(0, 255, 150, 0.2); box-shadow: 0 0 10px rgba(0, 255, 150, 0.4); color: #0096ff; }
+.theme-neon .action-btn.primary { background: linear-gradient(135deg, #00ff96, #0096ff); box-shadow: 0 0 20px rgba(0, 255, 150, 0.4), 0 0 30px rgba(0, 150, 255, 0.3); }
+.theme-neon .action-btn.primary:hover { box-shadow: 0 0 30px rgba(0, 255, 150, 0.6), 0 0 40px rgba(0, 150, 255, 0.5); }
