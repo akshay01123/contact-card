@@ -707,24 +707,80 @@ body {
 
 /* Pastel Theme - Soft, Dreamy Colors */
 .theme-pastel {
-  background: linear-gradient(135deg, #fce4ec 0%, #e1f5fe 50%, #f3e5f5 100%);
+  background: linear-gradient(135deg, #fce4ec 0%, #e3f2fd 40%, #f3e5f5 70%, #fce4ec 100%);
 }
 
 .theme-pastel .card {
-  background: linear-gradient(180deg, #fff9fb 0%, #f3f5ff 100%);
-  box-shadow: 0 4px 16px rgba(233, 30, 99, 0.1), 0 8px 24px rgba(63, 81, 181, 0.08);
+  background: linear-gradient(180deg, #fffbfe 0%, #f8f5ff 50%, #f5f8ff 100%);
+  box-shadow: 
+    0 2px 8px rgba(194, 24, 91, 0.08),
+    0 8px 24px rgba(94, 53, 177, 0.12),
+    0 16px 40px rgba(194, 24, 91, 0.06);
+  border: 1px solid rgba(194, 24, 91, 0.1);
 }
 
 .theme-pastel .left {
-  background: linear-gradient(135deg, rgba(244, 143, 177, 0.08), rgba(144, 202, 249, 0.08));
+  background: linear-gradient(135deg, rgba(244, 143, 177, 0.12), rgba(171, 71, 188, 0.1));
+  box-shadow: 0 8px 20px rgba(194, 24, 91, 0.08);
+  border: 1px solid rgba(194, 24, 91, 0.06);
 }
 
-.theme-pastel .person-name { color: #c2185b; }
-.theme-pastel .person-title { color: #5e35b1; }
-.theme-pastel .contact-link { color: #7b1fa2; }
-.theme-pastel .social { background: rgba(233, 30, 99, 0.08); border-color: rgba(233, 30, 99, 0.2); color: #c2185b; }
-.theme-pastel .social:hover { background: rgba(233, 30, 99, 0.15); color: #880e4f; }
-.theme-pastel .action-btn.primary { background: linear-gradient(135deg, #ec407a, #ab47bc); }
+.theme-pastel .person-name { 
+  color: #b71c6f; 
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.theme-pastel .person-title { 
+  color: #6a3ba3;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.theme-pastel .contact-link { 
+  color: #8b3a8b;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.theme-pastel .contact-link:hover { 
+  color: #c2185b; 
+  border-bottom-color: #c2185b;
+}
+
+.theme-pastel .social { 
+  background: linear-gradient(135deg, rgba(244, 143, 177, 0.12), rgba(171, 71, 188, 0.08));
+  border: 1px solid rgba(194, 24, 91, 0.18);
+  color: #b71c6f;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.theme-pastel .social:hover { 
+  background: linear-gradient(135deg, rgba(244, 143, 177, 0.2), rgba(171, 71, 188, 0.15));
+  border-color: rgba(194, 24, 91, 0.3);
+  color: #880e4f;
+  box-shadow: 0 4px 12px rgba(194, 24, 91, 0.15);
+  transform: translateY(-2px);
+}
+
+.theme-pastel .action-btn.primary { 
+  background: linear-gradient(135deg, #ec407a 0%, #ab47bc 100%);
+  box-shadow: 0 4px 16px rgba(194, 24, 91, 0.2), 0 2px 8px rgba(171, 71, 188, 0.1);
+}
+
+.theme-pastel .action-btn.primary:hover {
+  box-shadow: 0 8px 24px rgba(194, 24, 91, 0.3), 0 4px 12px rgba(171, 71, 188, 0.15);
+}
+
+.theme-pastel .company {
+  color: #8b3a8b;
+  font-weight: 700;
+}
+
+.theme-pastel .slogan {
+  color: #9a5b9a;
+}
 
 /* Vibrant Theme - Bold, Energetic Colors */
 .theme-vibrant {
