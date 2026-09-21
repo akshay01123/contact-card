@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Theme application
   function applyTheme(value) {
     // Remove all theme classes
-    const allThemes = ['theme-dark', 'theme-modern', 'theme-minimal', 'theme-pastel', 'theme-vibrant', 'theme-professional', 'theme-sunset', 'theme-ocean', 'theme-forest', 'theme-purple', 'theme-rose', 'theme-monochrome', 'theme-neon'];
+    const allThemes = ['theme-dark', 'theme-modern', 'theme-minimal', 'theme-professional'];
     allThemes.forEach(theme => card.classList.remove(theme));
     
     // Add the selected theme (skip 'default' as it has no class)
