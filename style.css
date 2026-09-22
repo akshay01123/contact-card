@@ -68,10 +68,12 @@ body {
 .card-inner{
   position: relative;
   z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 160px;
-  gap: 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .brand {
@@ -81,6 +83,7 @@ body {
   gap: 0.45rem;
   padding-left: 0;
   margin-left: 0;
+  order: -1;
 }
 
 .avatar {
@@ -126,7 +129,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 8px 20px rgba(16, 42, 67, 0.04);
@@ -140,7 +143,7 @@ body {
 
 .person-name {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 900;
   color: var(--navy);
   text-align: center;
@@ -633,9 +636,13 @@ body {
 }
 
 .theme-minimal .card-inner {
+  display: grid;
   grid-template-columns: 160px 1fr;
   gap: 1rem 2rem;
   align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  text-align: left;
 }
 
 .theme-minimal .minimal-illustration {
@@ -704,8 +711,6 @@ body {
 .theme-minimal .brand-mark {
   display: none;
 }
-
-/* Professional Theme - Corporate Trust */
 .theme-professional {
   background: linear-gradient(180deg, #f5f7fa 0%, #c3cfe2 100%);
 }
