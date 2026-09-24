@@ -39,16 +39,16 @@ body {
   width: min(760px, 100%);
   /* clean white background with subtle gradient */
   background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
-  border-radius: 18px;
+  border-radius: 20px;
   padding: clamp(1.25rem, 3vw, 2.25rem);
   box-shadow:
-    0 2px 8px rgba(16, 42, 67, 0.04),
-    0 12px 32px rgba(16, 42, 67, 0.08),
-    0 24px 64px rgba(16, 42, 67, 0.1);
-  border: 1px solid rgba(16, 42, 67, 0.08);
+    0 1px 3px rgba(16, 42, 67, 0.06),
+    0 10px 30px rgba(16, 42, 67, 0.12),
+    0 20px 60px rgba(16, 42, 67, 0.08);
+  border: 1px solid rgba(16, 42, 67, 0.06);
   position: relative;
   overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card::before{ display: none; }
@@ -89,12 +89,13 @@ body {
 .avatar {
   width: 160px;
   height: 160px;
-  border-radius: 18px;
+  border-radius: 20px;
   object-fit: cover;
   box-shadow:
-    0 8px 24px rgba(3, 41, 66, 0.18),
-    0 2px 8px rgba(3, 41, 66, 0.08);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+    0 10px 30px rgba(3, 41, 66, 0.15),
+    0 2px 6px rgba(3, 41, 66, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
 }
 
 .company {
@@ -132,10 +133,11 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 1.5rem 1rem;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.85);
-  box-shadow: 0 8px 20px rgba(16, 42, 67, 0.04);
+  padding: 1.75rem 1.5rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(250, 253, 255, 0.85) 100%);
+  box-shadow: 0 4px 16px rgba(16, 42, 67, 0.05);
+  border: 1px solid rgba(58, 166, 163, 0.08);
 }
 
 .right {
@@ -173,19 +175,21 @@ body {
 }
 
 .contact-link {
-  color: var(--ink);
+  color: var(--blue);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: color 0.2s ease, opacity 0.2s ease;
-  padding: 0.3rem 0;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
   border-bottom: 2px solid transparent;
   line-height: 1.5;
 }
 
 .contact-link:hover {
-  color: var(--blue);
-  border-bottom: 2px solid var(--blue);
+  color: var(--teal);
+  border-bottom-color: var(--teal);
+  background: rgba(58, 166, 163, 0.08);
 }
 
 .socials {
@@ -196,24 +200,25 @@ body {
 
 .social {
   font-size: 14px;
-  color: var(--muted);
+  color: var(--blue);
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 10px;
-  background: rgba(26, 95, 143, 0.05);
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(58, 166, 163, 0.08), rgba(26, 95, 143, 0.08));
   border: 1px solid rgba(26, 95, 143, 0.15);
   font-weight: 600;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .social:hover {
-  background: rgba(26, 95, 143, 0.1);
-  color: var(--blue);
+  background: linear-gradient(135deg, rgba(58, 166, 163, 0.15), rgba(26, 95, 143, 0.15));
+  color: var(--teal);
   border-color: rgba(26, 95, 143, 0.3);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(26, 95, 143, 0.1);
 }
 
 .qr {
@@ -427,13 +432,14 @@ body {
 .editor select {
   width: 100%;
   margin-top: 0.4rem;
-  padding: 0.6rem 0.8rem;
-  border: 1.5px solid rgba(16, 42, 67, 0.1);
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid rgba(16, 42, 67, 0.12);
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-family: inherit;
-  transition: all 0.2s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .editor input[type="text"]:focus,
@@ -442,8 +448,8 @@ body {
 .editor select:focus {
   outline: none;
   border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(58, 166, 163, 0.1);
-  background-color: rgba(58, 166, 163, 0.02);
+  box-shadow: 0 0 0 4px rgba(58, 166, 163, 0.1);
+  background-color: rgba(58, 166, 163, 0.03);
 }
 
 .editor fieldset {
